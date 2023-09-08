@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Profile</title>
     <style>
-          body {
+        body {
             font-family: Arial, sans-serif;
             background-color: #d9b4e7;
             margin: 0;
@@ -20,8 +20,8 @@
             text-align: center;
             font-size: larger;
         }
-   
-            header span {
+
+        header span {
             display: inline-block;
             border-radius: 50%;
             width: 220px;
@@ -58,6 +58,7 @@
             background-color: #2b1230;
             color: white;
         }
+
         footer a {
             color: white;
         }
@@ -67,9 +68,9 @@
 <body>
     <header>
         <h1 data-testid="slackUserName">Ummkhalad Oluwatosin Abdulrasheed</h1>
-  <span>
-        <img src="Omaah.jpeg" alt="Ummkhalad" data-testid="Omaah">
-  </span>
+        <span>
+            <img src="Omaah.jpeg" alt="Ummkhalad" data-testid="slackDisplayImage">
+        </span>
     </header>
     <main>
         <p data-testid="currentDayOfTheWeek">Tuesday</p>
@@ -79,6 +80,15 @@
     <footer>
         <p data-testid="githubURL"><a href="https://github.com/omaah2/profile">GitHub Repository</a></p>
     </footer>
+
+    <script>
+        const currentUTCTimeElement = document.querySelector('[data-testid="currentUTCTime"]');
+        const timestamp = Date.now();
+        const date = new Date(timestamp);
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', timeZoneName: 'short' };
+        const formattedTime = date.toLocaleDateString(undefined, options);
+        currentUTCTimeElement.textContent = formattedTime;
+    </script>
 </body>
 
 </html>
