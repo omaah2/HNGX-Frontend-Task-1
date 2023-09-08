@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <style>
+          body {
+            font-family: Arial, sans-serif;
+            background-color: #d9b4e7;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #2b1230;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: larger;
+        }
+   
+            header span {
+            display: inline-block;
+            border-radius: 50%;
+            width: 220px;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        header img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #2b1230;
+            color: white;
+        }
+        footer a {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 data-testid="slackUserName">Ummkhalad Oluwatosin Abdulrasheed</h1>
+  <span>
+        <img src="Omaah.jpeg" alt="Ummkhalad" data-testid="Omaah">
+  </span>
+    </header>
+    <main>
+        <p data-testid="currentDayOfTheWeek">Tuesday</p>
+        <time data-testid="currentUTCTime" datetime="2022-09-09T15:36:17.000Z">September 9, 2022 15:36:17 UTC</time>
+        <p data-testid="myTrack">Frontend</p>
+    </main>
+    <footer>
+        <p data-testid="githubURL"><a href="https://github.com/your-username/your-repo">GitHub Repository</a></p>
+    </footer>
+</body>
+
+</html>
