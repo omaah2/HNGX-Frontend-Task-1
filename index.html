@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Profile</title>
+    <title>Frontend Page Creation</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -69,25 +69,22 @@
     <header>
         <h1 data-testid="slackUserName">Ummkhalad Oluwatosin Abdulrasheed</h1>
         <span>
-            <img src="Omaah.jpeg" alt="Ummkhalad" data-testid="slackDisplayImage">
+            <img src="Omaah.jpeg" alt="Ummkhalad Oluwatosin Abdulrasheed" data-testid="slackDisplayImage">
         </span>
     </header>
     <main>
         <p data-testid="currentDayOfTheWeek">Tuesday</p>
-        <time data-testid="currentUTCTime" datetime="2022-09-09T15:36:17.000Z">September 9, 2022 15:36:17 UTC</time>
+        <p data-testid="currentUTCTime"></p>
         <p data-testid="myTrack">Frontend</p>
     </main>
     <footer>
-        <p data-testid="githubURL"><a href="https://github.com/omaah2/profile">GitHub Repository</a></p>
+        <p data-testid="githubURL"><a href="https://github.com/omaah2/HNGX-Frontend-Task-1">GitHub Repository</a></p>
     </footer>
 
     <script>
         const currentUTCTimeElement = document.querySelector('[data-testid="currentUTCTime"]');
         const timestamp = Date.now();
-        const date = new Date(timestamp);
-        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', timeZoneName: 'short' };
-        const formattedTime = date.toLocaleDateString(undefined, options);
-        currentUTCTimeElement.textContent = formattedTime;
+        currentUTCTimeElement.textContent = `Current UTC Time (in milliseconds): ${timestamp}`;
     </script>
 </body>
 
